@@ -33,12 +33,13 @@ const Page = () => {
           >
             Cancelar
           </Link>
-          <Link
+          <button
+            type="submit"
             href="/adicionar"
             className="rounded-lg px-4 py-2 text-white bg-black hover:opacity-80"
           >
             Adicionar
-          </Link>
+          </button>
         </div>
       </form>
     </main>
