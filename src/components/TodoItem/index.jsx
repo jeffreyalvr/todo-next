@@ -1,8 +1,8 @@
 "use client";
 
-const TodoItem = ({ id, text, completed, toggleTodo }) => {
+const TodoItem = ({ id, text, completed, toggleTodo, handleExcluir }) => {
   return (
-    <div className="flex flex-row gap-3" key={id}>
+    <div className="group flex flex-row gap-3" key={id}>
       <input
         id={id}
         type="checkbox"
@@ -16,6 +16,12 @@ const TodoItem = ({ id, text, completed, toggleTodo }) => {
       >
         {text}
       </label>
+      <button
+        className="text-red-400 underline text-sm hidden group-hover:inline-block"
+        onClick={() => handleExcluir(id)}
+      >
+        excluir
+      </button>
     </div>
   );
 };
