@@ -20,7 +20,7 @@ const Home = async () => {
       </div>
       <Link
         href="/adicionar"
-        className="rounded-lg px-4 py-2 text-white bg-black"
+        className="rounded-lg px-4 py-2 text-white bg-black hover:opacity-80"
       >
         Nova meta
       </Link>
