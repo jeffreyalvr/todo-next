@@ -17,7 +17,7 @@ const TodoItem = ({ id, text, completed, toggleTodo, handleExcluir }) => {
         {text}
       </label>
       <button
-        className="text-red-400 underline text-sm hidden group-hover:inline-block"
+        className="text-red-400 underline text-sm hidden group-hover:inline-block hover:text-red-600"
         onClick={() => handleExcluir(id)}
       >
         excluir
