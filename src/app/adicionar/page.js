@@ -2,6 +2,8 @@ import { prisma } from "@/db";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
+import SubmitButton from "./components/SubmitButton";
+
 const Page = () => {
   const createTodo = async (data) => {
     "use server";
@@ -33,13 +35,7 @@ const Page = () => {
           >
             Cancelar
           </Link>
-          <button
-            type="submit"
-            href="/adicionar"
-            className="rounded-lg px-4 py-2 text-white bg-black hover:opacity-80"
-          >
-            Adicionar
-          </button>
+          <SubmitButton />
         </div>
       </form>
     </main>
