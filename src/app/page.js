@@ -34,14 +34,20 @@ const Home = async () => {
           <span className="text-blue-600">({todos.length})</span>
         </h1>
         <div className="my-8 border-t-2 border-b-2 py-4">
-          {todos.map((todo) => (
-            <TodoItem
-              key={todo.id}
-              {...todo}
-              toggleTodo={toggleTodo}
-              handleExcluir={handleExcluir}
-            />
-          ))}
+          {todos.length > 0 ? (
+            todos.map((todo) => (
+              <TodoItem
+                key={todo.id}
+                {...todo}
+                toggleTodo={toggleTodo}
+                handleExcluir={handleExcluir}
+              />
+            ))
+          ) : (
+            <p className="italic text-gray-500 text-center">
+              Nenhum todo adicionado ainda.
+            </p>
+          )}
         </div>
         <Link
           href="/adicionar"
