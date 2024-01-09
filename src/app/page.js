@@ -20,6 +20,7 @@ const Home = async () => {
 
   const getTodos = async () => {
     "use server";
+    revalidatePath("/");
     return prisma.todo.findMany();
   };
 
