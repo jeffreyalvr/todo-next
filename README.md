@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### Nome do Projeto: Criador de Artigos
 
-## Getting Started
+## Informações gerais
 
-First, run the development server:
+### Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Aplicação simples para criação de todos usando Next JS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tecnologias utilizadas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Next JS;
+2. Prisma ORM;
+3. Neon PostgresSQL.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Capturas de tela
 
-## Learn More
+_a ser adicionado futuramente_
 
-To learn more about Next.js, take a look at the following resources:
+## Acesso direto ao projeto em produção
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para testar o projeto em produção, acesse o seguinte link hospedado na plataforma Vercel:
+https://projeto-todo-nextjs.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Acesso por meio de instalação local
 
-## Deploy on Vercel
+1. Baixe o projeto pelo GitHub ou realize um clone do mesmo (Necessário possuir o `Node` e `npm` instalados em sua máquina de forma global).
+2. Navegue até a pasta raiz do projeto e abra-a utilizando um terminal ou prompt de comando de sua escolha.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Agora utilize os seguintes comandos para suas operações:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Instalação dos pacotes utilizados pela aplicação:
+
+`npm install`
+
+2. Iniciação do servidor:
+
+`npm run start`
+
+3. Por fim, acesse a aplicação global por meio da seguinte URL:
+
+`localhost:3000`
