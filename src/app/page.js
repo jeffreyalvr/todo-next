@@ -18,6 +18,12 @@ const Home = async () => {
     revalidatePath("/");
   };
 
+  const handleExcluirTudo = async () => {
+    "use server";
+    await prisma.todo.deleteMany({});
+    revalidatePath("/");
+  };
+
   const getTodos = async () => {
     "use server";
     revalidatePath("/");
@@ -49,12 +55,20 @@ const Home = async () => {
             </p>
           )}
         </div>
-        <Link
-          href="/adicionar"
-          className="rounded-lg px-4 py-2 text-white bg-black hover:opacity-80"
-        >
-          Nova meta
-        </Link>
+        <div className="flex flex-row gap-2">
+          <Link
+            href="/adicionar"
+            className="rounded-lg px-4 py-2 text-white bg-black hover:opacity-80"
+          >
+            Nova meta
+          </Link>
+          <button
+            className="rounded-lg px-4 py-2 text-black bg-red-300 hover:opacity-80"
+            onClick={handleExcluirTudo}
+          >
+            Excluir tudo
+          </button>
+        </div>
       </div>
       <Footer />
     </main>
