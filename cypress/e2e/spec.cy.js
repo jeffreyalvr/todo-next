@@ -1,5 +1,6 @@
 // define a URL da aplicação em deploy local
 let url = "http://localhost:3000/";
+
 describe("Teste de inclusão", () => {
   it("Adiciona um todo", () => {
     cy.visit(url);
@@ -10,6 +11,14 @@ describe("Teste de inclusão", () => {
     cy.get("[type=submit]").click();
 
     cy.url().should("eq", url);
-    cy.contains(new RegExp("meta adicionada pelo cypress"));
+    cy.get("label").should("exist").contains("meta adicionada pelo cypress");
+  });
+});
+
+describe("Teste de alteração de estado", () => {
+  it("Altera estado de um todo", () => {
+    cy.visit(url);
+
+    cy.get('[data-testid="todo-status-1"]').should("exist").click();
   });
 });
