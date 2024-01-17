@@ -10,7 +10,8 @@ Aplicação simples para criação de todos usando Next JS.
 
 1. Next JS;
 2. Prisma ORM;
-3. Neon PostgresSQL.
+3. Neon PostgresSQL;
+4. Cypress.
 
 ### Capturas de tela
 
