@@ -5,6 +5,7 @@ import { prisma } from "@/db";
 import TodoItem from "@/components/TodoItem";
 
 import Footer from "../components/Footer";
+import ButtonExcluir from "../components/ButtonExcluir";
 
 const Home = async () => {
   const toggleTodo = async (id, completed) => {
@@ -62,12 +63,10 @@ const Home = async () => {
           >
             Nova meta
           </Link>
-          <button
-            className="rounded-lg px-4 py-2 text-black bg-red-300 hover:opacity-80"
-            onClick={handleExcluirTudo}
-          >
-            Excluir tudo
-          </button>
+          <ButtonExcluir
+            text="Excluir tudo"
+            handleExcluirTudo={handleExcluirTudo}
+          />
         </div>
       </div>
       <Footer />
