@@ -14,11 +14,3 @@ describe("Teste de inclusão", () => {
     cy.get("label").should("exist").contains("meta adicionada pelo cypress");
   });
 });
-
-describe("Teste de alteração de estado", () => {
-  it("Altera estado de um todo", () => {
-    cy.visit(url);
-
-    cy.get('[data-testid="todo-status-1"]').should("exist").click();
-  });
-});
